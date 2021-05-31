@@ -1,51 +1,50 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<html lang="en">
 
-    {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+  {% include head.html %}
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
-
-    <div id="main" role="main" class="container">
+      {% assign current = page.url | downcase | split: '/' %}
+      <nav class="nav">
+        <div class="nav-container">
+            <ul>
+                <li class="transition">
+                    <a href="{{ '' | prepend: site.baseurl }}/" {% if current[1] == "about" or current[1] == "blog" or current[1] == "book" or current[1] == "project" %} class="normal" {% endif %} class="active">Home &#x1f3e0;</a>
+                </li>
+                <li class="transition">
+                    <a href="{{ '/blog' | prepend: site.baseurl }}" {% if current[1] == "blog" %} class="active"{% endif %} >Blog &#x1f4c1;</a>
+                </li>
+                <li class="transition">
+                    <a href="{{ '/book' | prepend: site.baseurl }}" {% if current[1] == "book" %} class="active"{% endif %} >Book &#x1f4da;</a>
+                </li>
+                <li class="transition">
+                    <a href="{{ '/project' | prepend: site.baseurl }}" {% if current[1] == "project" %} class="active"{% endif %} >Language &#x1f30d;</a>
+                </li>                
+            </ul>
+        </div>
+      </nav>
+    
+    {% if page.post-header == true %}
+        {% include post-header.html %}
+    {% endif %}
+    {% if page.project-header == true %}
+        {% include project-header.html %}
+    {% endif %}
+      
+    <main>
       {{ content }}
-    </div>
+        
+        <!-- {% if page.text == true %}
+            {% include share.html %}
+        {% endif %} -->
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
+    </main>
+      
+    {% include footer.html %}
+   
   </body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSC9VLZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 </html>

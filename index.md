@@ -10,7 +10,7 @@ description: Jihye Leee, who is a Digital Product Designer based in Seoul, South
     <h1 class="intro">
     I'm Mingming !
     </h1>
-    <h2 class="intro">밍밍이 블로그 &#x1f49c;</h2>
+    <h2 class="intro">밍밍이 공부방 &#x1f49c;</h2>
 </section>
 </div>
 {% include resume.html %}

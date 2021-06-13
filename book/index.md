@@ -3,7 +3,7 @@ layout: default
 work: true
 main: true
 title: Book review
-description: 책 리뷰를 올립니당
+description: 책 리뷰
 project-header: true
 header-img: "img/project_bg.jpg"
 ---

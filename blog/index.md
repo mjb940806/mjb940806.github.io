@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Blog"
-description: IT 관련 학습 내용을 올립니당
+description: IT 관련 학습 내용
 main: true
 project-header: true
 header-img: img/about.jpg

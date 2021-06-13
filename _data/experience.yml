@@ -1,9 +1,19 @@
-second-place:
+fourth-place:
 - name: Samsung Electronics
   role: Software Engineer
   date: 2020. AUG - Present
 
-first-place:
+third-place:
 - name: Symantec
   role: Technical Account Manager
   date: 2017. NOV - 2019. MAY
+
+second-place:
+- name: KITRI Best of the Best 6th
+  role: Software Vulnerability Analysis Track
+  date: 2017. JUN - 2018. MAR
+
+first-place:
+- name: LikeLion 4th
+  role: Front-end web developer
+  date: 2016. APR - 2016. SEP

@@ -7,7 +7,7 @@ book: true
 text: true
 author: "Mingming"
 post-header: true
-header-img: "img/books.jpg"
+header-img: "img/books.png"
 order: 1
 data-name: book-2020-06
 ridibooks: true

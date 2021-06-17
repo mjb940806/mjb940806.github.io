@@ -2,7 +2,7 @@
 layout: default
 work: true
 main: true
-title: Language
+title: Etc.
 description: 그 외 기록하고 싶은 내용
 project-header: true
 header-img: "img/project_bg.jpg"

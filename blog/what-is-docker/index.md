@@ -9,6 +9,7 @@ author: "Mingming"
 post-header: true
 header-img: "img/thumbnail.png"
 order: 1
+series: "Container"
 ---
 ![docker](img/docker.jpg)
 도커(Docker)는 컨테이너 기반의 오픈소스 가상화 플랫폼입니다. 도커를 이용하면 개발, 테스트, 서비스 환경을 통일하여 효율적으로 관리할 수 있습니다.

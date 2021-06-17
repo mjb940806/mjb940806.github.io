@@ -40,7 +40,7 @@ inode의 할당 상태를 확인하기 위한 inode bitmap이라는 자료구조
 
 ### Inode 조회
 파일에 해당하는 inode는 `ls`의 `-i` 옵션으로 조회할 수 있습니다.
-```
+```bash
 user@user-Samsung-DeskTop-System:~/inode_test$ ls -ali
 합계 12
 11575667 drwxrwxr-x  2 user user 4096  6월 17 09:58 .

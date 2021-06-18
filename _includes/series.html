@@ -16,7 +16,7 @@
   </div>
   <ul>
   {% assign count = '0' %}
-  {% for post in site.pages reversed %}
+  {% for post in site.pages %}
   {% if post.series == page.series %}
       {% capture count %}{{ count | plus: '1' }}{% endcapture %}
       <li>{{ count }}.

@@ -19,11 +19,11 @@ series: "Linux RFS"
 ## File system
 하드 드라이브와 같은 저장 장치는 파일을 저장하기 전 파티션이 파일 시스템으로 포맷됩니다. 리눅스 시스템에서 파티션은 주로 EXT4로 포맷됩니다. 그 외 파일 시스템으로는 B-Tree File System(BTRFS), Reiser File System, ZFS 등이 있습니다. (파일 시스템에 대해서는 다른 글에서 자세히 다룰 예정입니다.)
 
-## Inode
+## Inode (Index Node)
 ![inode](img/inode.PNG)
 Inode는 EXT4에서 파일의 메타데이터를 담고 있는 자료구조입니다. 파일 시스템 내에서 파일이나 디렉토리는 고유한 inode를 가지며 inode 번호를 통해 구분이 가능합니다.
 
-사용자가 파일에 접근할 때 파일명을 사용하지만 내부적으로는 파일 이름이 디렉토리 테이블에 저장된 inode 번호에 매핑되고, 매핑된 inode 번호를 통해 해당 inode에 접근합니다. [^2]
+사용자가 파일에 접근할 때 파일명을 사용하지만 내부적으로는 파일 이름이 디렉토리 테이블에 저장된 inode 번호에 매핑되고, 매핑된 inode 번호를 통해 해당 inode에 빠르게 접근할 수 있습니다. [^2] 따라서 inode는 파일을 빠르게 찾기 위해 정보를 순서대로 정리한 것이라고 할 수 있습니다.
 
 ### Inode 번호
 ![Inode table](img/inode_table.PNG)

@@ -39,21 +39,23 @@ inode의 할당 상태를 확인하기 위한 inode bitmap이라는 자료구조
 17번 inode에 메타데이터가 저장되어 있는 파일을 지우게 되면 해당 bitmap 값도 0이 되고 다른 파일이 사용할 수 있게 됩니다.
 
 ### Inode 조회
-파일에 해당하는 inode는 `ls`의 `-i` 옵션으로 조회할 수 있습니다.
+파일에 해당하는 inode는 `stat` 명령어로 조회할 수 있습니다.
 ```bash
-user@user-Samsung-DeskTop-System:~/inode_test$ ls -ali
-합계 12
-11575667 drwxrwxr-x  2 user user 4096  6월 17 09:58 .
-10747906 drwxr-xr-x 38 user user 4096  6월 17 09:51 ..
-11575669 -rw-rw-r--  1 user user    7  6월 17 09:52 original.txt
+user@e578ae40797b:~/inode_test$ stat original.txt
+  File: original.txt
+  Size: 26              Blocks: 8          IO Block: 4096   regular file
+Device: 86h/134d        Inode: 207133      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/    user)   Gid: ( 1000/    user)
+Access: 2021-06-19 17:07:10.010000000 +0900
+Modify: 2021-06-19 17:07:10.010000000 +0900
+Change: 2021-06-19 17:07:10.010000000 +0900
+ Birth: -
 ```
-- `11575669`: inode 번호
-- `-`: 파일의 유형 ('d'는 디렉토리, '-'는 일반 파일, 'l'은 링크 파일)
-- `rw-rw-r--`: 파일 권한
-- `1`: 해당 파일의 링크 수 (파일에 대한 하드 링크, 심볼릭 링크는 다음 글에서 자세히 다룰 예정입니다.)
-- `user user`: 파일을 소유한 사용자와 그룹
-- `7`: 파일의 크기
-- `6월 17 09:52`: 최종 수정 일시
+- `Inode`: inode 번호
+- `Access`: 파일 권한
+- `Links`: 해당 파일의 링크 수
+- `Uid`: 소유자 정보
+- `Gid`: 그룹 정보
 
 ## 정리
 이번 글에서는 리눅스 파일 시스템에서 사용되는 inode에 대해 알아보았습니다. 다음 글에서는 하드 링크와 심볼릭 링크에 대해 다룰 예정입니다!

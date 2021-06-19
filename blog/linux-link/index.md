@@ -27,8 +27,8 @@ ln -s [ORIGINAL] [LINK]
 ```
 `original.txt` 파일을 만들고 해당 파일에 대한 심볼링 링크 `symbolic_link.txt` 를 만들어봅시다!
 ```bash
-root@67cafffd6059:~/inode_test# vim original.txt
-root@67cafffd6059:~/inode_test# ln -s original.txt symbolic_link.txt
+user@e578ae40797b:~/inode_test# vim original.txt
+user@e578ae40797b:~/inode_test# ln -s original.txt symbolic_link.txt
 ```
 inode를 확인해보면 `original.txt` 와 `symbolic_link.txt` 의 inode 번호가 다른 것을 알 수 있습니다. 원본과 연결된 새로운 파일을 만드는 것이라서 새로운 inode가 생성되기 때문이죠.
 ```bash
@@ -62,14 +62,14 @@ This is the symbolic link file
 ### 심볼릭 링크 삭제하기
 심볼릭 링크는 원본과 다른 파일이기 때문에 심볼릭 링크를 삭제하더라도 원본 파일에는 영향을 주지 않습니다. 
 ```bash
-root@67cafffd6059:~/inode_test# rm symbolic_link.txt
-root@67cafffd6059:~/inode_test# cat original.txt
+user@e578ae40797b:~/inode_test# rm symbolic_link.txt
+user@e578ae40797b:~/inode_test# cat original.txt
 This is the original file
 ```
 하지만 원본 파일을 삭제하면 바로가기처럼 심볼릭 링크도 사용할 수 없게 됩니다.
 ```bash
-root@67cafffd6059:~/inode_test# rm original.txt
-root@67cafffd6059:~/inode_test# cat symbolic_link.txt
+user@e578ae40797b:~/inode_test# rm original.txt
+user@e578ae40797b:~/inode_test# cat symbolic_link.txt
 cat: symbolic_link.txt: No such file or directory
 ```
 
@@ -101,31 +101,31 @@ total 16
 
 ### 하드 링크 수정하기
 ```bash
-root@67cafffd6059:~/inode_test# cat original.txt
+user@e578ae40797b:~/inode_test# cat original.txt
 This is the original file
-root@67cafffd6059:~/inode_test# cat hard_link.txt
+user@e578ae40797b:~/inode_test# cat hard_link.txt
 This is the original file
 ```
 하드 링크는 원본 파일 자체이기 때문에 하드 링크를 수정하면 원본 파일도 수정됩니다.
 ```bash
-root@67cafffd6059:~/inode_test# vim hard_link.txt
-root@67cafffd6059:~/inode_test# cat hard_link.txt
+user@e578ae40797b:~/inode_test# vim hard_link.txt
+user@e578ae40797b:~/inode_test# cat hard_link.txt
 This is the hard link file
-root@67cafffd6059:~/inode_test# cat original.txt
+user@e578ae40797b:~/inode_test# cat original.txt
 This is the hard link file
 ```
 
 ### 하드 링크 삭제하기
 심볼릭 링크와 달리 하드 링크는 원본 파일을 삭제하더라도 하드 링크가 해당 inode에 대한 정보를 가지고 있기 때문에 그대로 사용할 수 있습니다.
 ```bash
-root@67cafffd6059:~/inode_test# rm original.txt
-root@67cafffd6059:~/inode_test# cat hard_link.txt
+user@e578ae40797b:~/inode_test# rm original.txt
+user@e578ae40797b:~/inode_test# cat hard_link.txt
 This is the hard link file
 ```
 마찬가지로 하드 링크를 삭제하더라도 원본 파일은 inode 정보를 가지고 있기 때문에 그대로 사용할 수 있습니다.
 ```bash
-root@67cafffd6059:~/inode_test# rm hard_link.txt
-root@67cafffd6059:~/inode_test# cat original.txt
+user@e578ae40797b:~/inode_test# rm hard_link.txt
+user@e578ae40797b:~/inode_test# cat original.txt
 This is the original file
 ```
 

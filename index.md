@@ -10,7 +10,8 @@ description:
     <h1 class="intro">
     Mingming's log
     </h1>
-    <h3>&#x1f49c; 감정은 사라지고 결과는 남는다</h3>
+    <h3>&#x1f49c; Today is the best day to start learning! &#x1f49c;</h3>
+    <img src="img/start-learning-today.png">
 </section>
 </div>
 {% include resume.html %}

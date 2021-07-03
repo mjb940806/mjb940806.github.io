@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[LINUX] 파일 링크"
-subtitle: "Symbolic link, hard link"
+subtitle: "Symbolic link, Hard link"
 type: "Linux"
 blog: true
 text: true
@@ -40,7 +40,7 @@ total 12
 207133 lrwxrwxrwx 1 user user   12 Jun 19 17:19 symbolic_link.txt -> original.txt
 ```
 그림으로 살펴보면 아래와 같은 구조입니다.
-![symbolic link](img/symbolic_link.png)
+<img src="img/symbolic_link.png" alt="symbolic link" style="zoom: 67%;" />
 
 ### 심볼릭 링크 수정하기
 ```bash
@@ -97,7 +97,7 @@ total 16
 207135 -rw-rw-r-- 2 user user   26 Jun 19 17:22 original.txt
 ```
 그림으로 살펴보면 아래와 같은 구조입니다.
-![hard link](img/hard_link.png)
+<img src="img/hard_link.png" alt="hard link" style="zoom: 67%;" />
 
 ### 하드 링크 수정하기
 ```bash
@@ -130,8 +130,10 @@ This is the original file
 ```
 
 ## 정리
-![file link](img/file_link.png)
+![imode drawing](img/link_drawing.png)
+<img src="img/file_link.png" alt="file link" style="zoom: 67%;" />
 심볼릭 링크와 하드 링크의 가장 큰 차이는 새로운 inode의 생성 여부이며, 그에 따라 용량, 원본 파일이 삭제되는 경우 접근 가능 여부 등이 달라집니다.
+
 
 [^1]: [하드링크와 심볼릭 링크의 차이점](http://www.metalpen.net/blog/?p=439) 를 참고하여 작성했습니다.
 [^2]: [왜 디렉터리 Hard link를 만들 수 없나요?](https://notes.harues.com/posts/why-hard-link-not-allowed-for-directory/) 에서 이에 대한 자세한 내용을 확인할 수 있습니다.

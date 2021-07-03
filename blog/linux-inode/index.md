@@ -58,6 +58,7 @@ Change: 2021-06-19 17:07:10.010000000 +0900
 - `Gid`: 그룹 정보
 
 ## 정리
+![imode drawing](img/inodes_drawing.png)
 이번 글에서는 리눅스 파일 시스템에서 사용되는 inode에 대해 알아보았습니다. 다음 글에서는 하드 링크와 심볼릭 링크에 대해 다룰 예정입니다!
 
 [^1]: [How Do Linux Inodes Work?](https://www.maketecheasier.com/how-do-linux-inodes-work/)를 참고하여 작성했습니다.

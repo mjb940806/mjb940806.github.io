@@ -2,15 +2,15 @@
 layout: default
 title: "ming"
 main: true
-subtitle: Digital Product Designer Jihye Leee
-description: Jihye Leee, who is a Digital Product Designer based in Seoul, South Korea. | '이지혜' 디지털 프로덕트 디자이너입니다.
+subtitle: 
+description: 
 ---
 <div class="intro-animation">
 <section class="explanation">
     <h1 class="intro">
-    I'm Mingming !
+    Mingming's log
     </h1>
-    <h2 class="intro">밍밍이 공부방 &#x1f49c;</h2>
+    <h3>&#x1f49c; 감정은 사라지고 결과는 남는다</h3>
 </section>
 </div>
 {% include resume.html %}

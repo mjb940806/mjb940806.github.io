@@ -10,7 +10,7 @@ description:
     <h1 class="intro">
     Mingming's log
     </h1>
-    <h3>&#x1f49c; Today is the best day to start learning! &#x1f49c;</h3>
+    &#x1f49c; Today is the best day to start learning! &#x1f49c;
     <a href="https://wizardzines.com/"><img src="img/start-learning-today.png"></a>
 </section>
 </div>

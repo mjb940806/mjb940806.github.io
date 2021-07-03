@@ -7,9 +7,9 @@ book: true
 text: true
 author: "Mingming"
 post-header: true
-header-img: "img/books.png"
+header-img: "../books.png"
 order: 1
-data-name: book-2020-06
+data-name: book-2021-06
 ridibooks: true
 link: "https://ridibooks.com/books/"
 ---

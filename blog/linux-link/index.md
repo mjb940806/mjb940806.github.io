@@ -8,7 +8,7 @@ text: true
 author: "Mingming"
 post-header: true
 header-img: "img/thumbnail.png"
-order: 2
+order: 3
 series: "Linux RFS"
 ---
 이번 글에서는 심볼릭 링크와 하드 링크에 대해 정리해보겠습니다. 

@@ -8,7 +8,7 @@ text: true
 author: "Mingming"
 post-header: true
 header-img: "img/thumbnail.png"
-order: 1
+order: 2
 series: "Linux RFS"
 ---
 업무 중 링크 파일 수정과 관련한 문제가 발생하여 공부하는 김에 리눅스 파일 시스템의 inode를 정리해보려고 합니다! [^1]

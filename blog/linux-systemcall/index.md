@@ -8,7 +8,7 @@ text: true
 author: "Mingming"
 post-header: true
 header-img: "img/thumbnail.png"
-order: 1
+order: 4
 series: "Linux Kernel"
 ---
 

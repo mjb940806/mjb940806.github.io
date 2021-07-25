@@ -40,7 +40,7 @@ TrustZone은 하나의 장치에 분리된 두 개의 환경을 제공하여 보
 별도의 보안이 필요하지 않은 어플리케이션들은 Non trusted 영역에서 수행되며 보안이 필요한 어플리케이션은 trusted 영역에서 수행됩니다. TrustZone에 대해서는 다른 포스트에서 자세히 다룹니다.
 
 ## 정리
-이번 글에서는 ARM 아키텍처에 대해 다루었습니다. 이어지는 글에서는 Armv8의 Exception model에 대해 정리해보겠습니다!
+이번 글에서는 ARM 아키텍처에 대해 다루었습니다. 이어지는 글에서는 AArch64의 Exception model에 대해 정리해보겠습니다!
 
 [^1]: [ARM 아키텍쳐(한국기술교육대학교)](https://cms3.koreatech.ac.kr/sites/yjjang/down/emsoc11/mod03a_ARM.pdf) 를 참고하여 작성했습니다.
 [^2]: [미래 컴퓨팅 환경 반영하는 ARM 아키텍처 기술](https://www.epnc.co.kr/news/articleView.html?idxno=205714) 을 참고하여 작성했습니다.

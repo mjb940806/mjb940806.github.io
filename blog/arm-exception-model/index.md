@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[ARM] AArch64의 Exception model"
+title:  "[ARM] AArch64의 예외 모델"
 subtitle: "ARM, architecture, AArch64, Exception model"
 type: "Arm"
 blog: true
@@ -12,12 +12,12 @@ order: 6
 series: "Arm architecture"
 ---
 
-AArch64(혹은 ARM64)는 ARMv8-A에서 쓰이는 ARM의 64비트 인스트럭션 셋 아키텍처입니다. 이번 글에서는 AArch64의 Exception model에 대해 다룹니다. [^1]
+AArch64(혹은 ARM64)는 ARMv8-A에서 쓰이는 ARM의 64비트 인스트럭션 셋 아키텍처입니다. 이번 글에서는 AArch64의 예외 모델(Exception model)에 대해 다룹니다. [^1]
 
-## 권한(Privilege)과 예외 레벨(Exception levels)
+## 권한(Privilege)과 예외 수준(Exception levels)
 소프트웨어는 시스템과 프로세서 자원에 대한 여러 접근 권한을 가집니다. 예를 들어, 사용자 어플리케이션은 시스템 구성에 대한 제한된 권한을 가지며, OS 커널은 높은 권한을 가집니다.
 
-AArch64는 다양한 수준의 권한을 가지고 있으며, 현재의 권한 단계는 프로세서가 예외(Exception)를 발생시키거나 반환할 때만 변경되기 때문에 이러한 권한 단계를 Exception Level(EL)이라고 합니다. 각 Exception Level은 고유 번호를 가지며, 번호가 클수록 높은 권한을 가집니다. 
+AArch64는 다양한 수준의 권한을 가지고 있으며, 현재의 권한 단계는 프로세서가 예외(Exception)를 발생시키거나 반환할 때만 변경되기 때문에 이러한 권한 단계를 예외 수준(Exception Level, EL)이라고 합니다. 각 예외 수준은 고유 번호를 가지며, 번호가 클수록 높은 권한을 가집니다. 
 
 ![exception level](img/arm_exception_level.png)
 
@@ -28,7 +28,7 @@ AArch64는 다양한 수준의 권한을 가지고 있으며, 현재의 권한 �
 
 > 사용자 공간을 포함해 외부에 노출될 수 있는 단말기의 실행 환경을 rich execution environment(REE)라 하고 REE가 제공하는 다양한 어플리케이션 실행과 관리를 위해 많은 기능을 제공하는 운영체제를 Rich Operating System(Rich OS)라고 합니다.
 
-Exception Level은 메모리 권한과 프로세서 자원 접근 권한에 적용됩니다.
+예외 수준은 메모리 권한과 프로세서 자원 접근 권한에 적용됩니다.
 
 ### 메모리 권한(Memory Privilege)
 Armv8-A는 Memory Management Unit(MMU)이라는 가상 메모리 시스템을 구현하여 소프트웨어가 메모리 영역에 속성(attribute)을 할당할 수 있도록 합니다. 이러한 속성에는 읽기/쓰기 권한도 포함되는데, 권한은 privileged 접근 권한과 unprivileged 접근 권한으로 나뉩니다.
@@ -53,6 +53,6 @@ AArch64의 구성 설정은 시스템 레지스터에 저장됩니다. 시스템
 
 ## 정리
 ![exception](img/arm_exception.png)
-AArch64는 Exception Level을 가지며 지정된 Exception Level에서만 해당 메모리와 레지스터에 접근할 수 있습니다. 요구하는 권한 수준보다 낮은 권한 수준에서 해당 자원에 접근을 시도할 경우에는 예외가 발생합니다. 이어지는 글에서는 AArch64의 실행 상태와 보안 상태에 대해 정리해보겠습니다!
+AArch64는 예외 수준을 가지며 지정된 예외 수준에서만 해당 메모리와 레지스터에 접근할 수 있습니다. 요구하는 권한 수준보다 낮은 권한 수준에서 해당 자원에 접근을 시도할 경우에는 예외가 발생합니다. 이어지는 글에서는 AArch64의 실행 상태와 보안 상태에 대해 정리해보겠습니다!
 
 [^1]: [Privilege and Exception levels](https://developer.arm.com/documentation/102412/0100/Privilege-and-Exception-levels) 를 참고하여 작성했습니다.

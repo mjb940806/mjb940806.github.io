@@ -14,6 +14,10 @@ series: "Arm architecture"
 
 ARM에서는 프로세서를 설계하여 반도체 제조사와 SoC 제조사에 Hard Macrocell 또는 Synthesizable core로 제공합니다. 반도체 제조사와 SoC 제조사에서는 제공받은 ARM core에 주변 장치를 추가하여 SoC를 만들어 판매하거나 자체 제품에 사용합니다. [^1]
 
+## ARM 프로세서와 아키텍처
+ARM 프로세서는 디바이스를 뜻하며, ARM 아키텍처는 프로세서를 설계하는 디자인을 의미합니다. ARM 프로세서는 ARM 아키텍처에 의존적이며, 같은 아키텍처 기반의 ARM 프로세서들은 같은 명령어를 사용합니다. ARM 아키텍처는 레지스터, 메모리 구조, ARM 어셈블리 명령어, 함수 호출 규약 등의 주요 기능을 포함합니다. 앞으로 설명할 ARMv8-A 아키텍처에는 Cortex-A53, Cortex-A57, Cortex-A72 프로세서가 포함됩니다.
+![processor](img/arm_processor.png)
+
 ## ARM 아키텍처
 ARM 아키텍처(ARM architecture)는 RISC 프로세서로 구조가 단순하고 전력 소모량이 낮아 임베디드 시스템에 주로 사용됩니다. ARM 아키텍처에는 A, R, M 세가지 프로파일이 있으며, 아래와 같은 특징을 가집니다.
 
